@@ -14,7 +14,9 @@ public class EstruturaSequencial {
         // exercicioFixacao();
         // areaTrapezio();
         // casting();
-        entradaDeDados();
+        // entradaDeDados();
+        // funcoes();
+        baskara();
     }
 
     public static void variaveisTipos() {
@@ -174,6 +176,68 @@ public class EstruturaSequencial {
         System.out.println(s1);
         System.out.println(s2);
         System.out.println(s3);
+
+        sc.close();
+    }
+
+    public static void funcoes() {
+        //Funções matemáticas
+        double x = 3.0;
+        double y = 4.0;
+        double z = -5.0;
+        double A, B, C;
+
+        A = Math.sqrt(x);
+        B = Math.sqrt(y);
+        C = Math.sqrt(25.0);
+
+        System.out.println("Raiz quadrada:");
+        System.out.println(A);
+        System.out.println(B);
+        System.out.println(C);
+
+        A = Math.pow(x, y);
+        B = Math.pow(x, 2.0);
+        C = Math.pow(5.0, 2.0);
+
+        System.out.println("Potência:");
+        System.out.println(A);
+        System.out.println(B);
+        System.out.println(C);
+
+        A = Math.abs(y);
+        B = Math.abs(z);
+        C = Math.abs(-5.0);
+
+        System.out.println("Valor absoluto:");
+        System.out.println(A);
+        System.out.println(B);
+        System.out.println(C);
+    }
+
+    public static void baskara() {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
+        double a, b, c, delta, x1, x2;
+
+        System.out.println("Digite os valores de a, b e c:");
+        a = sc.nextDouble();
+        b = sc.nextDouble();
+        c = sc.nextDouble();
+
+        delta = Math.pow(b, 2.0) - 4 * a * c;
+
+        if (a == 0 || delta < 0) {
+            System.out.println("Impossível calcular");
+        } else {
+            x1 = (-b + Math.sqrt(delta)) / (2.0 * a);
+            x2 = (-b - Math.sqrt(delta)) / (2.0 * a);
+
+            System.out.println("Resultado:");
+            System.out.printf("X1 = %.5f%n", x1);
+            System.out.printf("X2 = %.5f%n", x2);
+        }
 
         sc.close();
     }
