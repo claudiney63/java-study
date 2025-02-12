@@ -294,3 +294,95 @@ public static void saidaDeDados() {
 - **Formatando**: Mostra diferentes formatos de saída para o mesmo número decimal.
 - **Locale**: Define o local padrão para `Locale.US`, que pode afetar a formatação de números e datas.
 
+### 2.4 Casting
+
+Casting é o processo de conversão de um tipo de dado em outro. Em Java, existem dois tipos principais de casting: casting implícito (automático) e casting explícito (manual).
+
+#### 2.4.1 Casting Implícito
+
+O casting implícito ocorre quando a conversão é feita automaticamente pelo compilador, sem a necessidade de intervenção do programador. Isso geralmente acontece quando se converte um tipo de dado menor para um tipo de dado maior.
+
+#### Exemplo de Código:
+
+```java
+public static void castingImplicito() {
+   System.out.println("Casting Implícito");
+
+   int a = 10;
+   double b = a; // Conversão automática de int para double
+
+   System.out.println("Valor de a: " + a);
+   System.out.println("Valor de b: " + b);
+}
+```
+
+#### 2.4.2 Casting Explícito
+
+O casting explícito é necessário quando se deseja converter um tipo de dado maior para um tipo de dado menor. Isso deve ser feito manualmente pelo programador, pois pode resultar em perda de dados.
+
+#### Exemplo de Código:
+
+```java
+public static void castingExplicito() {
+   System.out.println("Casting Explícito");
+
+   double a = 10.5;
+   int b = (int) a; // Conversão manual de double para int
+
+   System.out.println("Valor de a: " + a);
+   System.out.println("Valor de b: " + b);
+}
+```
+
+#### Explicação:
+
+- **Casting Implícito**: Ocorre automaticamente quando não há risco de perda de dados, como ao converter um `int` para `double`.
+- **Casting Explícito**: Requer a intervenção do programador para converter tipos de dados que podem resultar em perda de precisão, como ao converter um `double` para `int`.
+
+O casting é uma ferramenta poderosa em Java, mas deve ser usado com cuidado para evitar erros e perda de dados.
+
+
+### 2.5 Entrada de Dados
+
+Nesta seção, vamos explorar como realizar a entrada de dados em Java utilizando a classe `Scanner`. A entrada de dados é essencial para permitir que os usuários interajam com o programa, fornecendo informações que podem ser processadas e utilizadas pelo código.
+
+#### Exemplo de Código:
+
+```java
+import java.util.Scanner;
+
+public static void entradaDeDados() {
+   System.out.println("Entrada de Dados");
+
+   // Criação do objeto Scanner
+   Scanner scanner = new Scanner(System.in);
+
+   // Entrada de dados do tipo String
+   System.out.print("Digite seu nome: ");
+   String nome = scanner.nextLine();
+   System.out.println("Nome: " + nome);
+
+   // Entrada de dados do tipo int
+   System.out.print("Digite sua idade: ");
+   int idade = scanner.nextInt();
+   System.out.println("Idade: " + idade);
+
+   // Entrada de dados do tipo double
+   System.out.print("Digite sua altura: ");
+   double altura = scanner.nextDouble();
+   System.out.println("Altura: " + altura);
+
+   // Fechando o scanner
+   scanner.close();
+}
+```
+
+#### Explicação:
+
+- **Criação do objeto Scanner**: Utiliza `new Scanner(System.in)` para criar um objeto `Scanner` que lê a entrada do console.
+- **Entrada de dados do tipo String**: Utiliza `scanner.nextLine()` para ler uma linha de texto digitada pelo usuário.
+- **Entrada de dados do tipo int**: Utiliza `scanner.nextInt()` para ler um número inteiro digitado pelo usuário.
+- **Entrada de dados do tipo double**: Utiliza `scanner.nextDouble()` para ler um número decimal digitado pelo usuário.
+- **Fechando o scanner**: Utiliza `scanner.close()` para fechar o objeto `Scanner` e liberar os recursos associados.
+
+A classe `Scanner` é uma ferramenta poderosa para realizar a entrada de dados em Java, permitindo que os programas sejam mais interativos e dinâmicos.
