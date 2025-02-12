@@ -162,6 +162,19 @@ public class EstruturaSequencial {
         System.out.println(y);
         System.out.println(z);
 
+        //Ler texto ate a quebra de linha
+        String s1, s2, s3;
+
+        sc.nextLine(); // Consumir a quebra de linha
+        s1 = sc.nextLine();
+        s2 = sc.nextLine();
+        s3 = sc.nextLine();
+
+        System.out.println("Dados digitados:");
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+
         sc.close();
     }
 }
